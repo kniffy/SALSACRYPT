@@ -174,7 +174,7 @@ proc ::bc::getKey {for} {
 proc ::bc::onEncryptedText {nick host hand chan arg} {
 	set key [::bc::getKey $chan]
 	if {$key==""} {return}
-	set tmp [decrypt $key $arg]
+	set tmp [::fishdance::decrypt $key $arg]
 	if {[regexp {^(\S+) ?(.*)$} $tmp "" trigger arguments]} {
 	foreach item [binds pub] {
 		if {[lindex $item 2]=="+OK"} {continue}
@@ -217,7 +217,7 @@ proc ::bc::onEncryptedMsg {nick host hand arg} {
 		puthelp2 "PRIVMSG $nick :remove your key or exchange a new one with me"
 		return
 	}
-	set tmp [decrypt $key $arg]
+	set tmp [::fishdance::decrypt $key $arg]
 	if {[regexp {^(\S+) ?(.*)$} $tmp "" trigger arguments]} {
 	foreach item [binds msg] {
 		if {[lindex $item 2]=="+OK"} {continue}
@@ -346,4 +346,5 @@ proc test { nick host hand chan arg } {
 
 bind pub - !test test
 
-putlog "blowcrypt.tcl v[format %.1f [expr $::bc::version / 10.0]] by poci/PPX - blowcrypting the scene since ~2003!"
+#putlog "blowcrypt.tcl v[format %.1f [expr $::bc::version / 10.0]] by poci/PPX - blowcrypting the scene since ~2003!"
+putlog "salsacrypt loaded, word to your mom!"
