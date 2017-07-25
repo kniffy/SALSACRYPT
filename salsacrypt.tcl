@@ -2,10 +2,6 @@
 #
 # all of this was made easy because of FiSHDANCE, courtesy tittof :)
 #
-# TODO:
-# - sane keyex
-# - choice of cryption types?
-#
 # newskool changelog:
 #
 # 1.0 / 24.07.2017

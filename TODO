@@ -1,0 +1,9 @@
+ TODO:
+ - sane keyex
+    dh1080 is crap, implement X25519 ECDH
+ - choice of cryption types?
+    people still insist on using blowfish, and nobody likes to migrate
+    choosing other cool ciphers would be neat (camellia \o/)
+ - fix topics?
+    they dont work for more than 10 seconds, naturally
+
