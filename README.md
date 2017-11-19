@@ -21,3 +21,4 @@ it myself. dont ask me about keyex either.
 
 have fun, kids.
 
+come idle on #salsacrypt at link-net, or #kiwidox on efnet
